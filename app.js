@@ -1,18 +1,28 @@
-function cheakDrinkage() {
-    const inputAge = parseInt(prompt("Please write your name"))
+const loginForm = document.body.querySelector("#login-form")
+const loginFormInput = document.body.querySelector("#login-form input")
 
-    if (isNaN(inputAge) || inputAge < 0) {
-        alert("Please write real number")
-    } else if(inputAge <= 18){
-        alert("You can't drink yet...")
-    } else if(inputAge <= 50) {
-        alert("You can drink!")
-    } else if(inputAge === 100) {
-        alert("Wow,you are wise!")
-    } else if(inputAge >= 80) {
-        alert("You can drink but it's not good to your health")
-    } 
+const greetingMassege = document.body.querySelector("#greeting")
+const HIDDEN_CLASSNAME = "hidden"
+const USERNAME_KEY = "Username"
+
+function paintGreeting(savedUsername) {
+    greetingMassege.innerText = `Hi ${savedUsername}`;
+    greetingMassege.classList.remove(HIDDEN_CLASSNAME)
+}
+function handleSubmitEvent(event) {
+    event.preventDefault();
+    const username = loginFormInput.value;
+    localStorage.setItem(USERNAME_KEY,username);
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    paintGreeting(username)
 };
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (savedUsername === null) {
+    loginForm.classList.remove(HIDDEN_CLASSNAME)
+    loginForm.addEventListener("submit",handleSubmitEvent);
+} else {
+    paintGreeting(savedUsername);
+}
 
 
-cheakDrinkage()
