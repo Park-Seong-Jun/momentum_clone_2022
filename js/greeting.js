@@ -1,6 +1,5 @@
 const loginForm = document.body.querySelector("#login-form")
 const loginFormInput = document.body.querySelector("#login-form input")
-
 const greetingMassege = document.body.querySelector("#greeting")
 const HIDDEN_CLASSNAME = "hidden"
 const USERNAME_KEY = "Username"
