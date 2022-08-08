@@ -6,9 +6,7 @@ let toDoInfo = [];
 
 function deleteToDo(event) {
     const deleteTarget = event.target.parentElement;
-    console.log(toDoInfo)
     toDoInfo = toDoInfo.filter((element) => element.ID != deleteTarget.id);
-    console.log(toDoInfo)
     saveToDo();
     deleteTarget.remove();
 
