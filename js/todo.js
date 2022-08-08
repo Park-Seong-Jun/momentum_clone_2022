@@ -6,18 +6,20 @@ let toDoInfo = [];
 
 function deleteToDo(event) {
     const deleteTarget = event.target.parentElement;
-    console.log(toDoInfo)
-    toDoInfo = toDoInfo.filter((element) => element.ID != deleteTarget.id);
-    console.log(toDoInfo)
-    saveToDo();
     deleteTarget.remove();
+
+
+    toDoInfo = toDoInfo.filter((toDo) => toDo.id !== deleteTarget.id);
+    saveToDo();
+    
 
 };
 
 function addToDo(newToDo) {
+    
     const toDoList = document.createElement("li");
     toDoList.className = "todo-list__element";
-    toDoList.id = newToDo.ID;
+    toDoList.id = newToDo.id;
     const toDoSpan = document.createElement("span");
     toDoSpan.innerText = newToDo.toDo;
     toDoList.appendChild(toDoSpan);
@@ -35,7 +37,7 @@ function saveToDo() {
 function submitToDo(event) {
     event.preventDefault();
     const newToDo = toDoInput.value;
-    const li = {toDo : newToDo, ID : Date.now()};
+    const li = {toDo : newToDo, id : Date.now()};
     toDoInput.value = "";
     toDoInfo.push(li);
     saveToDo(li);
