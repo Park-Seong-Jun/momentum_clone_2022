@@ -1,0 +1,51 @@
+@keyframes appeareffect {
+    from {
+        opacity: 0;}
+    to {
+        opacity: 1;
+    }
+}
+
+
+.screen-center {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#greeting {
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    animation: 1s ease-in appeareffect;
+    margin-bottom: 10px;
+}
+#guide-phrase {
+    font-size: 20px;
+    font-weight: 500;
+    
+    text-align: center;
+}
+ 
+#name-input {
+    border: none;
+    border-bottom: 2px solid white;
+    background: none;
+    height: 20px;
+    width: 200px;
+    padding: 10px;
+    
+
+}
+#name-input:focus {
+    color: white;
+    font-size: 20px;
+    text-align: center;  
+}

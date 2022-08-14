@@ -1,0 +1,39 @@
+.screen-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.clock {
+    font-size: 90px;
+    font-weight: 500;
+    display: flex;
+    box-sizing: border-box;
+
+    
+
+
+}
+.clock__column:not(.clock__column:nth-child(2)) {
+    width: auto;
+    display: flex;
+    padding: 10px;
+}
+.clock__column:first-child {
+    justify-content: space-between;
+    display: flex;
+    align-items: flex-end;
+}
+
+.clock__column:last-child{
+    justify-content: center;
+    position: relative;
+}
+.clock__column__second {
+    display: flex;
+    justify-content: flex-start;
+    width: 65px;
+    position: absolute;
+    bottom: 8px;
+    right: -60px;
+    font-size: 50px;
+}

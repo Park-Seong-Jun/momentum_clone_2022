@@ -1,0 +1,62 @@
+#todo {
+    position: relative;
+    
+}
+#todo > span {
+    cursor: pointer;
+}
+.todo__box {
+    position: absolute;    
+    background-color: white;
+    padding: 10px;
+    min-width: 50px;
+
+    right: 0;
+    width: 120px;
+    border-radius: 10px;
+}
+.todo__box span {
+    color: black;
+    
+}
+.todo__box__input {
+    width: 80px;
+    
+}
+.todo__box__input input {
+    margin-top: 10px;
+    border: none;
+    border-bottom: 2px solid black;
+    background: none;
+    text-align: center;
+    color: black;
+    width: 70px;
+}
+
+.todo__box__input input::placeholder {
+    
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: start;
+    
+}
+.todo__box__input input:focus {
+    color: black;
+    text-align: start;
+}
+.todo__box__input input:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+}
+.todo__box__list {
+    max-height: 180px;
+    overflow:scroll;
+}
+.todo__box__list__element {
+    font-size: 15px;
+    margin-top: 5px ;
+    color: black;
+}
+.todo__box__list__element i {
+    margin-right: 10px;
+}

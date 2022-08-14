@@ -1,38 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
-    <form id="todo">
-      <input
-        type="text"
-        placeholder="Please write your to do and press the enter key!"
-        required
-      />
-    </form>
-    <ul id="todo-list"></ul>
+    <section class="screen-top">
+      <div id="book-mark" class="hidden">
+        <span>bookmark</span>
+        <ul class="links hidden">
+          <li>
+            <a href="https://linktr.ee/nomad_coders" target="_blank"
+              >-Nomad Coders' Links</a
+            >
+          </li>
+          <li>
+            <a href="https://youtu.be/Jm5v-dZnYCs" target="_blank"
+              >-Lofi-Mix1</a
+            >
+          </li>
+          <li>
+            <a href="https://youtu.be/fhkQcCmkt6s" target="_blank"
+              >-Lofi-Mix2</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div id="weather" class="hidden">
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+    <section class="screen-center-above"></section>
+    <section class="screen-center">
+      <div class="clock hidden">
+        <div class="clock__column">
+          <span class="clock__column__hour"></span>
+        </div>
+        <div class="clock__column"><span>:</span></div>
 
-    <h1 id="greeting" class="hidden"></h1>
-    <div id="quote-message">
-      <h2></h2>
-      <span></span>
-    </div>
-    <form id="login-form" class="hidden">
-      <input
-        type="text"
-        placeholder="Please type your name!"
-        maxlength="15"
-        required
-      />
-      <input type="submit" value="submit" />
-    </form>
+        <div class="clock__column">
+          <span></span>
+          <div class="clock__column__second"><span></span></div>
+        </div>
+      </div>
+      <form id="login-form">
+        <h1 id="guide-phrase">안녕하세요,<br />닉네임을 입력해 주세요</h1>
+        <input
+          id="name-input"
+          type="text"
+          maxlength="15"
+          autocomplete="off"
+          required
+        />
+      </form>
+      <h1 id="greeting" class="hidden"></h1>
+    </section>
 
-    <h2 id="clock"></h2>
+    <section class="screen-center-below"></section>
+
+    <section class="screen-row">
+      <div id="quote-message" class="hidden">
+        <h2></h2>
+        <span></span>
+      </div>
+      <div id="todo" class="hidden">
+        <div class="todo__box hidden">
+          <span>Today</span>
+          <ul class="todo__box__list"></ul>
+          <form class="todo__box__input">
+            <input type="text" placeholder="New Todo" required />
+          </form>
+        </div>
+        <span>Todo</span>
+      </div>
+    </section>
+
     <script
       src="https://kit.fontawesome.com/660566d5c2.js"
       crossorigin="anonymous"
@@ -42,5 +92,7 @@
     <script src="js/bgImg.js"></script>
     <script src="js/quote.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/link.js"></script>
   </body>
 </html>
